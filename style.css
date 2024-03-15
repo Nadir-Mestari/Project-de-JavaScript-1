@@ -1,0 +1,50 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(18, 24, 85);
+}
+header {
+  width: 100%;
+  text-align: center;
+}
+.box-quiz {
+  background: rgb(241, 241, 241);
+  border: 7px solid rgb(0, 0, 0);
+  width: 100%;
+  padding: 10px 20px;
+}
+h4 {
+  padding: 20px 0;
+}
+button {
+  margin: 0 20px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  transition: 0.1s;
+}
+.btn-clicked-false {
+  background: red;
+  color: whitesmoke;
+  transform: scale(1.2);
+}
+.btn-clicked-true {
+  background: rgb(0, 255, 0);
+  color: whitesmoke;
+  transform: scale(1.2);
+}
+p {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  padding: 10px 0;
+  visibility: hidden;
+}

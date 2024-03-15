@@ -1,14 +1,28 @@
 
-function soustraction(a , b) {
-  console.log(a - b);
-  return a + b;
-  console.log(a + b);
-}
 
-soustraction(7, 9)
-soustraction(7, 90)
+// document.querySelector('.box-quiz').style. background = "yellow"
 
-soustraction(900, 90)
+const repence = (document.querySelector('.box-quiz'))
 
-let calcul = 7
-console.log(4 + calcul);
+console.log(repence);
+
+repence.style.borderRadius = "100px"
+repence.style.background = "yellow"
+
+
+let btn1 = (document.querySelector("#btn-1"))
+
+console.log(btn1);
+
+btn1.addEventListener("click", () =>{ 
+
+btn1.classList.add("btn-clicked-false");
+
+  
+})
+
+
+
+
+
+
