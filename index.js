@@ -7,6 +7,9 @@ const btn1 = (document.getElementById("btn-1") )
 const btn2 = (document.getElementById("btn-2") )
 const respenceFeu = (document.getElementById("p-feu"))
 const respenceEau = (document.getElementById("p-eau"))
+const mousemove = (document.querySelector("#image2"))
+console.log(mousemove);
+
 
 console.log(btn1, btn2);
 console.log(box);
@@ -14,7 +17,7 @@ console.log(box);
 
 
 box.style.borderRadius = "100px"
-box.style.background = "yellow"
+box.style.background = "trasparent"
 
 
 
@@ -28,7 +31,21 @@ btn2.addEventListener("click", () =>{
     respenceEau.classList.toggle("p-respence")
 })
 
+window.addEventListener("mousemove", (e) => {
+    mousemove.style.top = e.pageY + "px"
+    mousemove.style.left = e.pageX + "px"
+ 
+})
 
+window.addEventListener("mouseup", (e) => {
+   mousemove.style.transform = "scale(1) translate(-30%, -30%)"
+ 
+})
+
+window.addEventListener("mousedown", (e) => {
+    mousemove.style.transform = "scale(2) translate(-30%, -30%)"
+ 
+})
 
 
 

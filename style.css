@@ -18,20 +18,51 @@ header {
   text-align: center;
 }
 .box-quiz {
-  background: rgb(241, 241, 241);
-  border: 7px solid rgb(0, 0, 0);
   width: 100%;
   min-height: 300px;
   padding: 10px 20px;
   position: relative;
+  animation: box 7s infinite alternate-reverse;
+  user-select: none;
+}
+@keyframes box {
+  0% {
+    border: 1px solid red;
+    box-shadow: inset 0 0px 20px red;
+  }
+  10% {
+    border: 1px solid rgb(255, 238, 0);
+    box-shadow: inset 0 0px 20px rgb(255, 238, 0);
+  }
+  30% {
+    border: 1px solid rgb(51, 255, 0);
+    box-shadow: inset 0 0px 20px rgb(51, 255, 0);
+  }
+  50% {
+    border: 1px solid rgb(0, 255, 200);
+    box-shadow: inset 0 0px 20px rgb(0, 255, 200);
+  }
+  60% {
+    border: 1px solid rgb(47, 0, 255);
+    box-shadow: inset 0 0px 20px rgb(47, 0, 255);
+  }
+  80% {
+    border: 1px solid rgb(255, 0, 204);
+    box-shadow: inset 0 0px 20px rgb(255, 0, 204);
+  }
+  100% {
+    border: 1px solid red;
+    box-shadow: inset 0 0px 20px red;
+  }
 }
 
-img {
+#image1 {
   position: absolute;
   background: url(./Fuséé.webp) center/cover;
   height: 100px;
+  filter: drop-shadow(-40px 40px 20px rgba(255, 47, 0, 0.333));
   width: 100px;
-  animation: fusee 3s ease-in-out infinite;
+  animation: fusee 30s ease-in-out infinite;
   top: 0;
   left: 0;
 }
@@ -72,9 +103,52 @@ img {
     transform: rotate(0deg);
   }
 }
+#image2 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  height: 44px;
+  width: 44px;
+  border: 1px solid red;
+  border-radius: 100px;
+  transition: 0.00001s linear;
+  z-index: -1;
+
+  animation: imagefeu 7s infinite alternate-reverse;
+}
+@keyframes imagefeu {
+  0% {
+    border: 1px solid red;
+    box-shadow: inset 0 0px 20px red;
+  }
+  10% {
+    border: 1px solid rgb(255, 238, 0);
+    box-shadow: inset 0 0px 20px rgb(255, 238, 0);
+  }
+  30% {
+    border: 1px solid rgb(51, 255, 0);
+    box-shadow: inset 0 0px 20px rgb(51, 255, 0);
+  }
+  50% {
+    border: 1px solid rgb(0, 255, 200);
+    box-shadow: inset 0 0px 20px rgb(0, 255, 200);
+  }
+  60% {
+    border: 1px solid rgb(47, 0, 255);
+    box-shadow: inset 0 0px 20px rgb(47, 0, 255);
+  }
+  80% {
+    border: 1px solid rgb(255, 0, 204);
+    box-shadow: inset 0 0px 20px rgb(255, 0, 204);
+  }
+  100% {
+    border: 1px solid red;
+    box-shadow: inset 0 0px 20px red;
+  }
+}
 
 h4 {
   padding: 20px 0;
+  color: white;
 }
 button {
   margin: 0 20px;
@@ -116,7 +190,7 @@ button {
   position: absolute;
   bottom: 20px;
   left: 50%;
-  transform: translateX(-300%);
+  transform: translateX(-500%);
   visibility: hidden;
   transition: 1s;
 }
