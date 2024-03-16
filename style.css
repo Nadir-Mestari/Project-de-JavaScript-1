@@ -201,3 +201,33 @@ button {
   left: 50%;
   transform: translateX(-50%);
 }
+.btn1-mouseenter {
+  border: 2px solid red;
+  box-shadow: inset 0 0px 20px red;
+  background: transparent;
+  color: white;
+}
+.btn1-mouseout {
+  background: black;
+  color: red;
+}
+.btn2-mouseenter {
+  border: 2px solid rgb(41, 159, 255);
+  box-shadow: inset 0 0px 20px rgb(41, 159, 255);
+  background: transparent;
+  color: white;
+}
+.btn2-mouseout {
+  background: black;
+  color: rgb(41, 159, 255);
+}
+
+div:nth-of-type(2) {
+  background: red;
+  height: 2px;
+  width: 80%;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
