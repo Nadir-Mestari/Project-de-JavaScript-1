@@ -247,7 +247,8 @@ label {
 }
 
 input,
-select {
+select,
+button[type="submit"] {
   margin: 10px;
   background: white;
   padding: 10px 20px;
@@ -255,6 +256,7 @@ select {
   border: none;
   transition: 0.1s;
   text-align: center;
+  text-transform: none;
 
   animation: input 7s infinite alternate-reverse;
 }
@@ -312,4 +314,8 @@ nav li {
   color: white;
   border-radius: 50px;
   padding: 5px;
+}
+
+input[type="checkbox"] {
+  animation: none;
 }

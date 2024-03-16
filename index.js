@@ -368,12 +368,16 @@ window.addEventListener("scroll" , () => {
 const inputText = document.querySelector("input[type=text]")
 const select = document.querySelector("select")
 
+let inputT = ""
+let selectT= ""
 
 inputText.addEventListener("input", (e) => {
-    console.log(e.target.value)
+   inputT = e.target.value
+   console.log(inputT);
 
 } )
 select.addEventListener("input", (e) => {
-    console.log(e.target.value)
+    selectT = e.target.value
+    console.log(selectT)
 
 } )
