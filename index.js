@@ -13,6 +13,12 @@ const keypress = document.querySelector(".keypress");
 
 const key = document.getElementById("key")
 const body = document.querySelector("body");
+const son = () => {
+    const audio = new Audio();
+    audio.src ="./sounds/son.wav"
+    audio.play();
+}
+
 const ring = () => {
     const audio = new Audio();
     audio.src ="./sounds/Enter.mp3"
@@ -176,11 +182,14 @@ btn2.addEventListener("mouseout", () => {
 
 respenceFeu.addEventListener("mouseover", () => {
     respenceFeu.style.border = "7px solid black";
+    respenceFeu.style.transform = "rotate(5deg)  translateX(-50%)";
+    
+
     
 })
 respenceEau.addEventListener("mouseover", () => {
     respenceEau.style.border = "7px solid white";
-    
+    respenceEau.style.transform = "rotate(-5deg)  translate(-50%, -50%)";
 })
 
 document.addEventListener("keypress" , (e) => {
@@ -318,7 +327,7 @@ document.addEventListener("keypress" , (e) => {
         keypress.style.background = "black"
         key.style.background = "black"
         body.style.background ="white"
-        ring();
+        son();
     }
     if (e.key === "w"){
         keypress.style.background = "green"
@@ -367,6 +376,9 @@ window.addEventListener("scroll" , () => {
 
 const inputText = document.querySelector("input[type=text]")
 const select = document.querySelector("select")
+const form = document.querySelector("form");
+
+
 
 let inputT = ""
 let selectT= ""
@@ -381,3 +393,129 @@ select.addEventListener("input", (e) => {
     console.log(selectT)
 
 } )
+
+
+form.addEventListener("submit" , (e) => {
+    e.preventDefault();
+
+    if (cgv.checked) {
+        div.innerHTML = ` <h2>Félicitation 🎉</h2> <div></div>
+        <h3>merci pour votre répence en vous tiendra au courant le plus rapidement que possible !</h3>`
+        cgvtext.style.color = "white"
+        div.style.color = "white"
+        form.style.display = "none"
+       } else {
+        cgvtext.style.color = "red"
+        alert("Veuillez acceptez les conditions générales de ventes");
+    }
+
+}) 
+
+window.addEventListener("load", () => {
+
+    console.log("charger");
+});
+
+
+const btnTout = document.querySelectorAll(".btn");
+
+btnTout.forEach((btntout) => {
+    btntout.addEventListener("mousedown", (e) => {
+        e.target.style.background = "yellow"
+        console.log(e.target);
+    })
+})
+
+// document.body.onclick = () => {
+//     ring()
+// }
+// document.body.onclick = () => {
+//     ring9()
+// }
+
+
+document.body.addEventListener("click", function() {
+   
+    console.log("yes1")
+});
+document.body.addEventListener("click", function() {
+   
+    console.log("yes2")
+} , true );
+
+
+
+btn1.addEventListener("click", function(e){
+   confirm("Es-ce-que tu es sûr de toi ?");
+    e.stopPropagation();
+})
+
+
+
+const imgBallons22 = document.querySelectorAll(".imgBallons")
+
+imgBallons22.forEach((Bal) => {
+    Bal.addEventListener("click", (e) => {
+        e.target.remove()
+        son()
+     
+    } )
+})
+
+
+
+
+//-------------------------BOM--------------
+
+// console.log(window.innerHeight)
+
+// window.open("https://nike.fr/" ,"Cours Js","height=333","width = 300");
+// window.addEventListener("click", () =>{
+
+//     setTimeout(() => {
+//         window.location.href = "https://nike.fr/"
+    
+//     }, 1 )
+   
+// })
+// setTimeout(() => {
+//     window.history.back()
+
+// }, 1 )
+
+// window.onload = () => {
+//     location.href = "https://nike.fr/"
+// }
+
+// console.log(navigator.userAgent);
+
+
+// var options = {
+//     enableHighAccuracy: true,
+//     timeout: 5000,
+//     maximumAge: 0,
+//   };
+  
+//   function success(pos) {
+//     var crd = pos.coords;
+  
+//     console.log("Votre position actuelle est :");
+//     console.log(`Latitude : ${crd.latitude}`);
+//     console.log(`Longitude : ${crd.longitude}`);
+//     console.log(`La précision est de ${crd.accuracy} mètres.`);
+//   }
+  
+//   function error(err) {
+//     console.warn(`ERREUR (${err.code}): ${err.message}`);
+//   }
+  
+//   navigator.geolocation.getCurrentPosition(success, error, options);
+
+console.log(history);
+
+
+window.addEventListener("mousemove", (e) => {
+    nav.style.setProperty("--x", e.layerX + "px")
+    nav.style.setProperty("--y", e.layerY + "px")
+    
+})
